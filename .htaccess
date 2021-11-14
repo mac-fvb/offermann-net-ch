@@ -1,0 +1,17 @@
+Header always set Strict-Transport-Security "max-age=15768000; preload"
+Header set X-Frame-Options "DENY"
+Header always set X-Content-Type-Options nosniff
+
+#<filesMatch ".(ico|jpg|jpeg|png|gif|woff2|svg)$">
+
+# Header set Cache-Control "max-age=2592000, public"
+
+#</filesMatch
+
+# <filesMatch ".(css|js)$">
+
+# Header set Cache-Control "max-age=86400, public"
+
+# </filesMatch>
+
+# Header set Content-Security-Policy "default-src 'self';"
