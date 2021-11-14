@@ -4,6 +4,7 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: url("../webfonts/roboto-v29-latin-regular.eot"); /* IE9 Compat Modes */
   src: local(""),
     url("../webfonts/roboto-v29-latin-regular.eot?#iefix")
@@ -3603,7 +3604,7 @@ body.is-preload .wrapper.fade > .inner {
 
 #footer > .inner .menu {
   font-size: 0.8em;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255);
 }
 
 #header + #wrapper + #footer > .inner {
