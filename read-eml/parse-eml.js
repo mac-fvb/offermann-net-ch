@@ -75,12 +75,19 @@ function isSupportedFileAPI() {
 
             var re = /[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+/g;
             var emailRe = fileData.body.match(re); 
+            
+            if (!emailRe) {
+              var errorMail = `${selectedFile.name} konnte keine E-Mailadresse gefunden werden. HTML-Mail?`
+              var newError = document.createElement("p");
+              newError.innerText = errorMail;
+              document.querySelector(".email-error").appendChild(newError);}
+            else{
             var addedEmail = emailRe[0]
             //console.log(addedEmail);
             
             var newListElement = document.createElement("li");
             newListElement.innerText = addedEmail;
-document.querySelector(".output-list").appendChild(newListElement);
+            document.querySelector(".output-list").appendChild(newListElement);}
 
             
 
@@ -113,4 +120,5 @@ const clearEmail = document.querySelector("#clearEmail")
 
 clearEmail.addEventListener("click", event => {
     document.querySelector(".body-email").innerHTML = "<p></p>"
+    document.querySelector(".email-error").innerText = ""
 });
