@@ -30,12 +30,12 @@ function isSupportedFileAPI() {
 
 
   $(function () {
-
     if (isSupportedFileAPI()) {
       $('.src-file').change(function () {
         var newList = document.createElement("ul");
         newList.classList.add("output-list");
         document.querySelector(".body-email").appendChild(newList);
+        var addressArray = [];
          for (i=0; i < this.files.length; i++){
             var selectedFile = this.files[i];
 
@@ -62,14 +62,14 @@ function isSupportedFileAPI() {
 
  
           if (!fileData.error) {
-    
-/*             $('.msg-example .msg-body').html(
+            /*     $('.msg-example .msg-body').html(
                 fileData.body ? fileData.body.substring(0, Math.min(500, fileData.body.length))
                 + (fileData.body.length > 500 ? '...' : '') : '');
             if (fileData.bodyHTML) {
               $('.msg-example .msg-body-html').html(fileData.bodyHTML).closest('div.field-block').show();
             } else {
               $('.msg-example .msg-body-html').closest('div.field-block').hide();
+
             } */
 
 
@@ -77,19 +77,19 @@ function isSupportedFileAPI() {
             var emailRe = fileData.body.match(re); 
             
             if (!emailRe) {
-              var errorMail = `${selectedFile.name} konnte keine E-Mailadresse gefunden werden. HTML-Mail?`
+              var errorMail = `${selectedFile.name} enthält keine E-Mailadresse.`
               var newError = document.createElement("p");
               newError.innerText = errorMail;
               document.querySelector(".email-error").appendChild(newError);}
-            else{
-            var addedEmail = emailRe[0]
-            //console.log(addedEmail);
             
+              else{
+            
+            var addedEmail = emailRe[0]
+            // wrap found email in <li> item and append to .output-list 
             var newListElement = document.createElement("li");
             newListElement.innerText = addedEmail;
             document.querySelector(".output-list").appendChild(newListElement);}
-
-            
+           
 
             $('.msg-info').show();
 
@@ -103,9 +103,6 @@ function isSupportedFileAPI() {
         };
         fileReader.readAsArrayBuffer(selectedFile);
       }  
-
-      // from here we can work with the email addresses in one array    
-
     }
       );
 
@@ -119,6 +116,7 @@ function isSupportedFileAPI() {
 const clearEmail = document.querySelector("#clearEmail")
 
 clearEmail.addEventListener("click", event => {
-    document.querySelector(".body-email").innerHTML = "<p></p>"
-    document.querySelector(".email-error").innerText = ""
+    document.querySelector(".body-email").innerHTML = "<p></p>";
+    document.querySelector(".email-error").innerText = "";
+    document.querySelector(".src-file").value = ""; 
 });
