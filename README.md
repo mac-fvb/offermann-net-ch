@@ -1,4 +1,4 @@
-Personal website of Michael Offermann.
+## Personal website of Michael Offermann.
 Originally just a weekend project for learning and understanding current HTML and CSS practices by putting my CV on a website.
 
 It now serves as a base to test other learning project, such as basic PHP for getting the message form to work.
