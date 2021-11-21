@@ -4039,7 +4039,6 @@ body.is-preload #sidebar nav ul li {
 }
 
 .employer {
-  text-transform: uppercase;
   margin: 0 0 0.4em 0;
 }
 
@@ -4093,4 +4092,19 @@ body.is-preload #sidebar nav ul li {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.hobbies {
+  padding-left: 0em;
+}
+
+.hobbies > li {
+  padding-left: 0em;
+}
+
+ul.hobbies li > a .label,
+ul.hobbies li > span .label {
+  display: inline;
+  border-bottom: dotted 1px rgba(255, 255, 255, 0.35);
+  font-family: "Roboto";
 }
