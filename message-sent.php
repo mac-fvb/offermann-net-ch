@@ -6,12 +6,12 @@
 -->
 <html lang="de">
 	<head>
-		<title>Michael Offermann - Nachricht versandt</title>
+		<title>Michael Kl&auml;ger - Nachricht versandt</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-<meta name="author" content="Michael Offermann" />
+<meta name="author" content="Michael Kl&auml;ger" />
 	<link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png?v=211018124615">
 	<link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png?v=211018124615">
 	<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png?v=211018124615">
@@ -54,7 +54,7 @@
 
 		<!-- Header -->
 			<header id="header">
-				<a href="index.html" class="title">Michael Offermann</a>
+				<a href="index.html" class="title">Michael Kl&auml;ger</a>
 				<nav>
 					<ul>
 						<li><a href="index.html">Home</a></li>
@@ -142,13 +142,13 @@ else {
 
 		$file_open = fopen('./form-data/array.csv','a');
 		
-		$mail_content = 'Vielen Dank. Sie haben am ' . $date . ' folgende Nachricht auf offermann-net.ch gesendet: 
+		$mail_content = 'Vielen Dank. Sie haben am ' . $date . ' folgende Nachricht auf Kl&auml;ger-net.ch gesendet: 
 		Ihr Name: ' . $name . '
 		Ihre Email: ' . $email . '
 		Ihre Nachricht:' . $message;
 
 		fputcsv($file_open, $form_data);
-		mail('michael@offermann-net.ch', 'Nachricht vom Kontaktformular offermann-net.ch', $mail_content);
+		mail('michael@Kl&auml;ger-net.ch', 'Nachricht vom Kontaktformular Kl&auml;ger-net.ch', $mail_content);
 
 		print'<h1 class="major">Vielen Dank</h1><p>Sie haben die folgende Nachricht gesendet.</p>';
 		print 'Ihr Name: ' . $name . ' <br />';
@@ -169,7 +169,7 @@ else {
 			<footer id="footer" class="wrapper alt">
 				<div class="inner">
 					<ul class="menu">
-						<li>&copy; Michael Offermann</li><li><a href="privacy.html">Impressum &amp; Datenschutz</a></li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; Michael Kl&auml;ger</li><li><a href="privacy.html">Impressum &amp; Datenschutz</a></li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 					</ul>
 				</div>
 			</footer>

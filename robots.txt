@@ -1,6 +1,6 @@
-# robots.txt zu http://offermann-net.ch
+# robots.txt zu http://Kl&auml;ger-net.ch
 
 User-agent: *
 Disallow: /form-data/
 
-Sitemap: https://offermann-net.ch/sitemap.xml
+Sitemap: https://Kl&auml;ger-net.ch/sitemap.xml
