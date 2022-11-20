@@ -2621,7 +2621,13 @@ input[type="radio"] + label:before {
   display: none;
 }
 
+.fab > .label { display: none;}
+
 .icon:before {
+  line-height: inherit;
+}
+
+.fab:before {
   line-height: inherit;
 }
 
@@ -2949,6 +2955,7 @@ ul.icons li > a .label,
 ul.icons li > span .label {
   display: inline;
   border-bottom: dotted 1px rgba(255, 255, 255, 0.35);
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Menu */
